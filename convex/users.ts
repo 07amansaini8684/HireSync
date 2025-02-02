@@ -1,6 +1,7 @@
 import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
 
+// Query for creating user..
 export const syncUser = mutation({
   args: {
     name: v.string(),
@@ -20,5 +21,30 @@ export const syncUser = mutation({
       ...args,
       role: "candidate",
     });
+  },
+});
+
+// Query for getting all users
+export const getUsers = query({
+  handler: async (ctx) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) throw new Error("Looks like User is not authenticated");
+    const users = await ctx.db.query("users").collect();
+    return users;
+  },
+});
+
+// Query for getting user by clerkId - means Authenticated User...
+export const getUserByClerkId = query({
+  args: {
+    clerkId: v.string(),
+  },
+  handler: async (ctx, args) => {
+    const user = await ctx.db
+      .query("users")
+      .withIndex("by_clerk_id", (q) => q.eq("clerkId", args.clerkId))
+      .first();
+
+    return user;
   },
 });
