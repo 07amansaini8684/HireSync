@@ -31,26 +31,37 @@ const CodeEditor = () => {
 
     const configureEditorTheme = (monaco: any) => {
         monaco.editor.defineTheme('pure-black', {
-          base: 'vs-dark',
-          inherit: true,
-          rules: [
-            { token: '', foreground: 'CCCCCC', background: '000000' },
-            { token: 'keyword', foreground: '569CD6' },
-            { token: 'number', foreground: 'B5CEA8' },
-            { token: 'string', foreground: 'CE9178' },
-          ],
-          colors: {
-            'editor.background': '#000000',
-            'editor.foreground': '#CCCCCC',
-            'editor.lineNumbers': '#404040',
-            'editor.lineHighlightBackground': '#000000',
-            'editor.selectionBackground': '#333333',
-            'editorCursor.foreground': '#FFFFFF',
-            'editorScrollbar.shadow': '#000000',
-            'editorWidget.background': '#000000',
-          }
+            base: 'vs-dark',
+            inherit: true,
+            rules: [
+                { token: '', foreground: 'CCCCCC', background: '000000' },
+                { token: 'keyword', foreground: '569CD6' },
+                { token: 'number', foreground: 'B5CEA8' },
+                { token: 'string', foreground: 'CE9178' },
+            ],
+            colors: {
+                'editor.background': '#000000',
+                'editor.foreground': '#CCCCCC',
+                'editor.lineNumbers': '#404040',
+                'editor.lineHighlightBackground': '#000000',
+                'editor.selectionBackground': '#333333',
+                'editorCursor.foreground': '#FFFFFF',
+                'editorScrollbar.shadow': '#000000',
+                'editorWidget.background': '#000000',
+            }
         });
-      };
+    };
+
+    const [output, setOutput] = useState('');
+
+    const handleRunCode = (code: string) => {
+        try {
+            const result = eval(code); // Or any other execution method
+            setOutput("It's not gonna work");
+        } catch (error: any) {
+            setOutput('Error: ' + error.message);
+        }
+    };
 
     return (
         <ResizablePanelGroup direction="vertical" className="min-h-[calc(100vh-4rem)] bg-gradient-to-br from-gray-900/95 to-blue-900/20">
@@ -266,6 +277,12 @@ const CodeEditor = () => {
 
                 {/* Editor Status Bar */}
                 <div className="absolute bottom-0 left-0 right-0 h-8 bg-gray-900/80 backdrop-blur border-t border-gray-700 flex items-center px-4 justify-between text-sm text-gray-400">
+                
+                <button onClick={() => handleRunCode(code)}>Run Code</button>
+                <div className="output-box flex items-center gap-1">
+                    <h3>Output:</h3>
+                    <pre>{output}</pre> {/* Display the result */}
+                </div>
                     <div className="flex items-center gap-4">
                         <span>{LANGUAGES.find(l => l.id === language)?.name}</span>
                         <span className="w-px h-4 bg-gray-600" />
