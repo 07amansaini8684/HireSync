@@ -23,7 +23,6 @@ import {
 } from "./ui/dropdown-menu";
 import { LayoutListIcon, LoaderIcon, UsersIcon } from "lucide-react";
 import EndCallButton from "./EndCallButton";
-import CodeEditor from "@/components/CodeEditor";
 
 const MeetingRoom = () => {
   const router = useRouter()
@@ -98,7 +97,7 @@ const MeetingRoom = () => {
       </ResizablePanel>
       <ResizableHandle />
       <ResizablePanel defaultSize={65} minSize={25}>
-        <CodeEditor/>
+        <h1>code editor will go here...</h1>
       </ResizablePanel>
     </ResizablePanelGroup>
     </div>

@@ -8,10 +8,8 @@ import { useState } from "react";
 import { CODING_QUESTIONS, LANGUAGES } from "@/constants";
 import { motion, AnimatePresence } from "framer-motion";
 import { Code2, BookText, Lightbulb, AlertCircle, ChevronRight, Sparkles, TerminalSquare } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Button, Badge, Tooltip } from "@/components/ui";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tab";
 
 const CodeEditor = () => {
     const [selectedQuestion, setSelectedQuestion] = useState(CODING_QUESTIONS[0]);
@@ -28,29 +26,6 @@ const CodeEditor = () => {
         setLanguage(newLanguage);
         setCode(selectedQuestion.starterCode[newLanguage]);
     };
-
-    const configureEditorTheme = (monaco: any) => {
-        monaco.editor.defineTheme('pure-black', {
-          base: 'vs-dark',
-          inherit: true,
-          rules: [
-            { token: '', foreground: 'CCCCCC', background: '000000' },
-            { token: 'keyword', foreground: '569CD6' },
-            { token: 'number', foreground: 'B5CEA8' },
-            { token: 'string', foreground: 'CE9178' },
-          ],
-          colors: {
-            'editor.background': '#000000',
-            'editor.foreground': '#CCCCCC',
-            'editor.lineNumbers': '#404040',
-            'editor.lineHighlightBackground': '#000000',
-            'editor.selectionBackground': '#333333',
-            'editorCursor.foreground': '#FFFFFF',
-            'editorScrollbar.shadow': '#000000',
-            'editorWidget.background': '#000000',
-          }
-        });
-      };
 
     return (
         <ResizablePanelGroup direction="vertical" className="min-h-[calc(100vh-4rem)] bg-gradient-to-br from-gray-900/95 to-blue-900/20">
@@ -69,68 +44,54 @@ const CodeEditor = () => {
                                     <div className="flex items-center gap-2 px-3 py-1 bg-gray-800 rounded-full">
                                         <TerminalSquare className="h-4 w-4 text-cyan-400" />
                                         <span className="text-sm font-medium text-gray-300">
-                                            {LANGUAGES.find(l => l.id === language)?.name}
-                                        </span>
+                      {LANGUAGES.find(l => l.id === language)?.name}
+                    </span>
                                     </div>
                                     <Badge variant="secondary" className="bg-emerald-500/20 text-emerald-400">
-                                        {selectedQuestion.difficulty}
+                                        {}
                                     </Badge>
                                 </div>
                             </motion.div>
 
-                            <div className="flex flex-col sm:flex-row gap-3">
-                                {/* Questions Tabs */}
-                                <div className="w-full sm:w-[300px]">
-                                    <Select value={selectedQuestion.id} onValueChange={handleQuestionChange}>
-                                        <SelectTrigger className="bg-gray-900/50 backdrop-blur-lg border border-gray-700">
-                                            <SelectValue placeholder="Select a question" />
-                                        </SelectTrigger>
-                                        <SelectContent className="bg-gray-900 border-gray-700">
-                                            {CODING_QUESTIONS.map((q) => (
-                                                <SelectItem
-                                                    key={q.id}
-                                                    value={q.id}
-                                                    className="data-[highlighted]:bg-blue-500/20 data-[highlighted]:text-blue-400"
-                                                >
-                                                    <div className="flex items-center truncate">
-                                                        <Sparkles className="h-4 w-4 mr-2 shrink-0" />
-                                                        <span className="truncate">{q.title}</span>
-                                                    </div>
-                                                </SelectItem>
-                                            ))}
-                                        </SelectContent>
-                                    </Select>
-                                </div>
-
-                                {/* Language Switcher */}
-                                <TooltipProvider>
-                                    <div className="flex items-center gap-1 p-1 bg-gray-900/50 rounded-lg border border-gray-700">
-                                        {LANGUAGES.map((lang) => (
-                                            <Tooltip key={lang.id}>
-                                                <TooltipTrigger asChild>
-                                                    <Button
-                                                        variant="ghost"
-                                                        size="sm"
-                                                        onClick={() => handleLanguageChange(lang.id)}
-                                                        className={`h-8 w-8 p-0 rounded-md ${language === lang.id
-                                                            ? 'bg-blue-500/20 text-blue-400'
-                                                            : 'text-gray-400 hover:bg-gray-800'
-                                                            }`}
-                                                    >
-                                                        <img
-                                                            src={lang.icon}
-                                                            alt={lang.name}
-                                                            className="w-5 h-5 object-contain"
-                                                        />
-                                                    </Button>
-                                                </TooltipTrigger>
-                                                <TooltipContent side="bottom">
-                                                    {lang.name}
-                                                </TooltipContent>
-                                            </Tooltip>
+                            <div className="flex gap-3">
+                                <Tabs defaultValue={selectedQuestion.id} className="w-[300px]">
+                                    <TabsList className="bg-gray-900/50 backdrop-blur-lg border border-gray-700">
+                                        {CODING_QUESTIONS.map((q) => (
+                                            <TabsTrigger
+                                                key={q.id}
+                                                value={q.id}
+                                                className="data-[state=active]:bg-blue-500/20 data-[state=active]:text-blue-400"
+                                                onClick={() => handleQuestionChange(q.id)}
+                                            >
+                                                <Sparkles className="h-4 w-4 mr-2" />
+                                                {q.title}
+                                            </TabsTrigger>
                                         ))}
-                                    </div>
-                                </TooltipProvider>
+                                    </TabsList>
+                                </Tabs>
+
+                                <div className="flex items-center gap-1 p-1 bg-gray-900/50 rounded-lg border border-gray-700">
+                                    {LANGUAGES.map((lang) => (
+                                        <Tooltip key={lang.id} content={lang.name}>
+                                            <Button
+                                                variant="ghost"
+                                                size="sm"
+                                                onClick={() => handleLanguageChange(lang.id)}
+                                                className={`h-8 w-8 p-0 rounded-md ${
+                                                    language === lang.id
+                                                        ? 'bg-blue-500/20 text-blue-400'
+                                                        : 'text-gray-400 hover:bg-gray-800'
+                                                }`}
+                                            >
+                                                <img
+                                                    src={`/${lang.id}.png`}
+                                                    alt={lang.name}
+                                                    className="w-5 h-5 object-contain"
+                                                />
+                                            </Button>
+                                        </Tooltip>
+                                    ))}
+                                </div>
                             </div>
                         </div>
 
@@ -235,11 +196,10 @@ const CodeEditor = () => {
             {/* Editor Section */}
             <ResizablePanel defaultSize={60} className="relative">
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-gray-900" />
-                // Then use it in your Editor component
                 <Editor
                     height="100%"
                     language={language}
-                    theme="pure-black" // Use the custom theme name
+                    theme="vs-dark"
                     value={code}
                     onChange={(value) => setCode(value || "")}
                     options={{
@@ -248,10 +208,11 @@ const CodeEditor = () => {
                         lineNumbers: "on",
                         glyphMargin: false,
                         folding: false,
-                        renderLineHighlight: 'none',
+                        renderLineHighlight: 'gutter',
                         scrollbar: {
                             vertical: 'hidden',
                             horizontal: 'hidden',
+                            handleMouseWheel: true
                         },
                         padding: { top: 20 },
                         overviewRulerBorder: false,
@@ -260,8 +221,7 @@ const CodeEditor = () => {
                         matchBrackets: 'always',
                         bracketPairColorization: { enabled: true },
                     }}
-                    className="!border-t-2 !border-black"
-                    beforeMount={configureEditorTheme}
+                    className="!border-t-2 !border-gray-700"
                 />
 
                 {/* Editor Status Bar */}
@@ -288,8 +248,8 @@ const CodeBlock = ({ label, value }: { label: string; value: string }) => (
             <span>{label}</span>
         </div>
         <pre className="p-4 bg-gray-800 rounded-lg border border-gray-700 text-sm font-mono text-cyan-300">
-            {value}
-        </pre>
+      {value}
+    </pre>
     </div>
 );
 
