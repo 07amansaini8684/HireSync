@@ -1,3 +1,6 @@
+
+"use client"
+
 import { useUserRole } from '@/hooks/useUserRole';
 import { Loader } from 'lucide-react';
 import { useRouter } from 'next/navigation';

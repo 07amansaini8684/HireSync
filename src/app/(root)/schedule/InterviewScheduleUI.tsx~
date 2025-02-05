@@ -23,8 +23,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import UserInfo from "@/components/UserInfo";
-import { FileSearch, Loader2Icon, XIcon } from "lucide-react";
-import { Calendar } from "@/components/ui/calendar"
+import { Loader2Icon, XIcon } from "lucide-react";
+import { Calendar } from "@/components/ui/calendar";
 import { TIME_SLOTS } from "@/constants";
 import MeetingCard from "@/components/MeetingCard";
 const InterviewScheduleUI = () => {
@@ -33,7 +33,7 @@ const InterviewScheduleUI = () => {
     const [open, setOpen] = React.useState(false);
     const [isCreating, setIsCreating] = React.useState(false);
 
-    const interviews = useQuery(api.interviews.getAllInterviews) ?? [];
+    const interviews = useQuery(api.interviews.getMyInterviews) ?? [];
     const users = useQuery(api.users.getUsers) ?? [];
     const createInterview = useMutation(api.interviews.createInterview);
 
@@ -290,15 +290,8 @@ return (
                 </div>
             </div>
         ) : (
-            <div className="flex flex-col items-center justify-center py-12 text-muted-foreground">
-            <FileSearch size={64} className="text-gray-400" />
-            <h2 className="text-lg font-semibold mt-4">No Interviews Scheduled</h2>
-            <p className="text-sm text-gray-500 mt-2">
-              Add interviews to keep track of your schedule.
-            </p>
-          </div>
+            <div className="text-center py-12 text-muted-foreground">No interviews scheduled</div>
         )}
-        
     </div>
 );
 }
