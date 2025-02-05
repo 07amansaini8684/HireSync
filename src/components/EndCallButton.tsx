@@ -1,7 +1,6 @@
 import React from 'react'
 import {useCall, useCallStateHooks} from "@stream-io/video-react-sdk";
 import {useRouter} from "next/navigation";
-import {useLocalParticipant} from "@stream-io/video-react-bindings/src/hooks/callStateHooks";
 import {useMutation, useQuery} from "convex/react";
 import {api} from "../../convex/_generated/api";
 import {Button} from "@/components/ui/button";
