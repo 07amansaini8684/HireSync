@@ -8,6 +8,7 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import DashboardBtn from "./DashboardBtn";
+import LanguageSelector from "./Editor/LanguageSelector";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -135,6 +136,7 @@ const Navbar = () => {
           </div>
         </SignedIn>
       </div>
+      <LanguageSelector hasAccess={true} />
     </nav>
   );
 };
