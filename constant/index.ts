@@ -6,12 +6,12 @@ const userPost = [
           "name": "TechGuru",
           "username": "@techguru",
           "role": "Developer Advocate",
-          "profilePicture": "https://somecdn.com/profiles/techguru.jpg"
+          "profilePicture": "https://i.pinimg.com/736x/96/73/61/967361c9a259a76a87011133303c802c.jpg"
         },
         "title": "Building Scalable Microservices with Kubernetes",
         "content": {
           "text": "Just finished our migration to a fully containerized architecture. Here's what we learned...\n\nOur monolith was becoming unwieldy. Breaking it down into microservices has improved our deployment velocity by 300%.",
-          "image": "https://somecdn.com/images/kubernetes-dashboard.png",
+          "image": "https://i.pinimg.com/736x/15/1f/04/151f0405d45cc4ed5e923786caa19f85.jpg",
           "link": "https://t.co/tech-blog-microservices"
         },
         "metadata": {
@@ -51,12 +51,12 @@ const userPost = [
           "name": "FoodieExplorer",
           "username": "@foodie_travels",
           "role": "Content Creator",
-          "profilePicture": "https://somecdn.com/profiles/foodie_explorer.jpg"
+          "profilePicture": "https://i.pinimg.com/736x/ce/8d/e1/ce8de1e42c491d4116710a4bfac593b8.jpg"
         },
         "title": "Hidden Gems: Street Food Tour of Bangkok",
         "content": {
           "text": "The best Pad Thai isn't in the fancy restaurants...\n\nYou'll find it in this tiny stall on Sukhumvit Soi 38, run by an elderly couple who've perfected their recipe over 40 years.",
-          "image": "https://somecdn.com/travel/bangkok-street-food-tour.jpg",
+          "image": "https://i.pinimg.com/736x/c9/c0/4f/c9c04fb61c1ea515b41c504a1c6fc169.jpg",
           "link": "https://t.co/foodie-bangkok-guide"
         },
         "metadata": {
@@ -76,7 +76,7 @@ const userPost = [
             "author": {
               "name": "WanderlustDreamer",
               "username": "@wanderlust",
-              "profilePicture": "https://somecdn.com/profiles/wanderlust.jpg"
+              "profilePicture": "https://i.pinimg.com/736x/e1/05/b2/e105b2458844d87a5c88b6501dbb1372.jpg"
             },
             "content": "Bookmarked! Planning my trip for next month. Any recommendations for vegetarian options?",
             "createdAt": "2 days ago",
@@ -96,12 +96,12 @@ const userPost = [
           "name": "DataScienceDaily",
           "username": "@datascienceinsights",
           "role": "Research Organization",
-          "profilePicture": "https://somecdn.com/profiles/datascience.jpg"
+          "profilePicture": "https://i.pinimg.com/736x/be/fd/e9/befde9e79bcc8afe2ced53377fe3ace8.jpg"
         },
         "title": "Breakthrough in Explainable AI: Making Black Box Models Transparent",
         "content": {
           "text": "Our team has developed a novel approach to interpreting deep neural networks...\n\nThe technique provides human-readable explanations for complex model decisions without sacrificing accuracy.",
-          "image": "https://somecdn.com/research/xai-visualization.png",
+          "image": "https://i.pinimg.com/736x/32/e3/fe/32e3fe3be6faff0563402ec963df844a.jpg",
           "link": "https://t.co/explainable-ai-research"
         },
         "metadata": {
@@ -121,7 +121,7 @@ const userPost = [
             "author": {
               "name": "AIEthicist",
               "username": "@ai_ethics",
-              "profilePicture": "https://somecdn.com/profiles/ai_ethics.jpg"
+              "profilePicture": "https://i.pinimg.com/736x/1b/dc/f2/1bdcf2dd55db1c201fd4b2fddda842e2.jpg"
             },
             "content": "Have you tested this with fairness metrics? Would love to see how it performs on detecting biases.",
             "createdAt": "1 week ago",
@@ -141,12 +141,12 @@ const userPost = [
           "name": "FitnessJourney",
           "username": "@fitness_transform",
           "role": "Certified Trainer",
-          "profilePicture": "https://somecdn.com/profiles/fitness_journey.jpg"
+          "profilePicture": "https://i.pinimg.com/736x/5f/82/13/5f82138e7b338e8188ce98088ff340ab.jpg"
         },
         "title": "5 Common Myths About Muscle Building Debunked",
         "content": {
           "text": "Stop believing these fitness myths!\n\nNo, you don't need to eat every 2 hours to build muscle. Research shows meal timing is far less important than total daily protein intake.",
-          "image": "https://somecdn.com/fitness/muscle-building-myths.jpg",
+          "image": "https://i.pinimg.com/736x/52/60/84/5260846d85339cbeaf0cc4ab581199c6.jpg",
           "link": "https://t.co/fitness-myths-science"
         },
         "metadata": {
@@ -186,12 +186,12 @@ const userPost = [
           "name": "ClimateAction",
           "username": "@climate_solutions",
           "role": "Environmental Scientist",
-          "profilePicture": "https://somecdn.com/profiles/climate_scientist.jpg"
+          "profilePicture": "https://i.pinimg.com/736x/b1/27/b7/b127b70f3e83d1ca76ec5a6e42c939ab.jpg"
         },
         "title": "Urban Forests: The Secret Weapon Against Climate Change",
         "content": {
           "text": "Cities worldwide are discovering the power of strategic urban forestry...\n\nBeyond aesthetics, properly designed urban forests can reduce city temperatures by up to 8°C and capture 4x more carbon than traditional parks.",
-          "image": "https://somecdn.com/environment/urban-forest-project.jpg",
+          "image": "https://i.pinimg.com/736x/45/86/42/4586426a62485a1ab87e590c5c3f1d0f.jpg",
           "link": "https://t.co/urban-forestry-guide"
         },
         "metadata": {
@@ -231,12 +231,12 @@ const userPost = [
           "name": "MusicProducer",
           "username": "@beats_lab",
           "role": "Audio Engineer",
-          "profilePicture": "https://somecdn.com/profiles/music_producer.jpg"
+          "profilePicture": "https://i.pinimg.com/736x/d4/45/43/d44543378a8e0ad32b3af307fa04fdf7.jpg"
         },
         "title": "How Lo-Fi Beats Became a Productivity Phenomenon",
         "content": {
           "text": "The science behind why millions are working to lo-fi beats...\n\nIt's not just aesthetic - the specific frequency ranges and predictable patterns create what neuroscientists call 'non-intrusive engagement' that boosts focus.",
-          "image": "https://somecdn.com/music/lofi-beats-studio.jpg",
+          "image": "https://i.pinimg.com/736x/d5/2d/7c/d52d7cdd20736a01b0978e04ac276d39.jpg",
           "link": "https://t.co/lofi-music-science"
         },
         "metadata": {
@@ -276,12 +276,12 @@ const userPost = [
           "name": "SpaceExplorer",
           "username": "@cosmic_journey",
           "role": "Astrophysicist",
-          "profilePicture": "https://somecdn.com/profiles/space_explorer.jpg"
+          "profilePicture": "https://i.pinimg.com/736x/14/d5/2c/14d52cbd0dd321bff9da8381c3bd8312.jpg"
         },
         "title": "Europa's Ocean: Our Best Bet for Alien Life?",
         "content": {
           "text": "Jupiter's moon Europa hides secrets beneath its icy surface...\n\nRecent data from NASA's Europa Clipper suggests its subsurface ocean contains more organic compounds than previously thought, significantly raising the possibility of finding extraterrestrial life.",
-          "image": "https://somecdn.com/space/europa-surface-rendering.jpg",
+          "image": "https://i.pinimg.com/736x/00/c8/96/00c89648c502ef044ad1fbb09b911ea4.jpg",
           "link": "https://t.co/europa-life-potential"
         },
         "metadata": {
@@ -321,12 +321,12 @@ const userPost = [
           "name": "HistoryBuff",
           "username": "@time_traveler",
           "role": "Historical Researcher",
-          "profilePicture": "https://somecdn.com/profiles/history_buff.jpg"
+          "profilePicture": "https://i.pinimg.com/736x/a3/97/70/a39770804294de9e7aecea66d74f9c3e.jpg"
         },
         "title": "Lost Medieval Recipes Rediscovered in Monastery Archives",
         "content": {
           "text": "A culinary treasure trove hidden for centuries...\n\nThese 12th-century recipes reveal sophisticated flavor combinations and cooking techniques that challenge our assumptions about medieval cuisine.",
-          "image": "https://somecdn.com/history/medieval-cookbook-page.jpg",
+          "image": "https://i.pinimg.com/736x/0f/56/3a/0f563ad9c1e41f2c4109847301854ec2.jpg",
           "link": "https://t.co/medieval-cuisine-discovery"
         },
         "metadata": {
@@ -366,12 +366,12 @@ const userPost = [
           "name": "CyberSecPro",
           "username": "@security_mindset",
           "role": "Security Researcher",
-          "profilePicture": "https://somecdn.com/profiles/cybersec_pro.jpg"
+          "profilePicture": "https://i.pinimg.com/736x/6e/8b/67/6e8b67bee54342c802046c1dae07f718.jpg"
         },
         "title": "The Rise of Living-Off-the-Land Attacks: Defending Against the Invisible",
         "content": {
           "text": "Modern hackers aren't writing custom malware anymore...\n\nThey're using your own legitimate system tools against you, making traditional security solutions nearly blind to the attack.",
-          "image": "https://somecdn.com/security/lotl-attack-diagram.png",
+          "image": "https://i.pinimg.com/736x/f7/ef/66/f7ef668eca95bc59cd05f2d294eec667.jpg",
           "link": "https://t.co/lotl-defense-guide"
         },
         "metadata": {
@@ -411,12 +411,12 @@ const userPost = [
           "name": "UrbanGardener",
           "username": "@city_plants",
           "role": "Horticulturist",
-          "profilePicture": "https://somecdn.com/profiles/urban_gardener.jpg"
+          "profilePicture": "https://i.pinimg.com/736x/97/a9/97/97a9973f7ce1a08c162d1f7636965de6.jpg"
         },
         "title": "Transform Your Balcony: Edible Garden in Just 4 Square Feet",
         "content": {
           "text": "You don't need a backyard to grow your own food...\n\nWith vertical gardening techniques and these companion planting maps, even a tiny balcony can produce 30+ pounds of vegetables each season.",
-          "image": "https://somecdn.com/gardening/small-space-harvest.jpg",
+          "image": "https://i.pinimg.com/736x/3e/bb/99/3ebb995c93ca7c6c9e0a33b0bc0d769c.jpg",
           "link": "https://t.co/balcony-garden-guide"
         },
         "metadata": {
@@ -456,12 +456,12 @@ const userPost = [
           "name": "QuantumPhysics",
           "username": "@quantum_frontiers",
           "role": "Research Physicist",
-          "profilePicture": "https://somecdn.com/profiles/quantum_physics.jpg"
+          "profilePicture": "https://i.pinimg.com/736x/59/fb/6a/59fb6aee56ab95047f07b98d32ed27df.jpg"
         },
         "title": "Beyond Entanglement: New Quantum Phenomenon Observed",
         "content": {
           "text": "Our lab has confirmed a theoretical prediction that's puzzled physicists for decades...\n\nThis 'quantum catalysis' effect allows particles to influence each other without direct interaction or entanglement, challenging fundamental assumptions.",
-          "image": "https://somecdn.com/science/quantum-experiment-setup.jpg",
+          "image": "https://i.pinimg.com/736x/7f/cd/76/7fcd7604b11afbcfec24351c05cde9d9.jpg",
           "link": "https://t.co/quantum-catalysis-paper"
         },
         "metadata": {
@@ -501,12 +501,12 @@ const userPost = [
           "name": "FilmCritic",
           "username": "@cinema_analysis",
           "role": "Film Historian",
-          "profilePicture": "https://somecdn.com/profiles/film_critic.jpg"
+          "profilePicture": "https://i.pinimg.com/736x/e4/37/2a/e4372af2cb04b950d4d6725c6db87a06.jpg"
         },
         "title": "The Lost Language of Silent Film: Techniques Modern Directors Are Rediscovering",
         "content": {
           "text": "Before dialogue dominated cinema, directors had developed an incredibly rich visual language...\n\nYou can see these forgotten techniques being revived in films like 'Dune' and 'Drive' - particularly in the symbolic use of negative space.",
-          "image": "https://somecdn.com/film/silent-vs-modern-techniques.jpg",
+          "image": "https://i.pinimg.com/736x/7e/ef/c2/7eefc25c6d65321c39a7f358560f0605.jpg",
           "link": "https://t.co/visual-cinema-essay"
         },
         "metadata": {
@@ -546,12 +546,12 @@ const userPost = [
           "name": "NeuroDiversity",
           "username": "@brain_variations",
           "role": "Neuroscientist",
-          "profilePicture": "https://somecdn.com/profiles/neuro_diversity.jpg"
+          "profilePicture": "https://i.pinimg.com/736x/9a/3d/7e/9a3d7e75fd2701d804c11cea6406314a.jpg"
         },
         "title": "ADHD in Adulthood: The Unexpected Strengths",
         "content": {
           "text": "Looking beyond the challenges of ADHD...\n\nNew research shows that adults with ADHD score significantly higher on creative problem-solving and pattern detection tasks, suggesting evolutionary advantages to this neurotype.",
-          "image": "https://somecdn.com/health/adhd-brain-activity-scan.jpg",
+          "image": "https://i.pinimg.com/736x/89/68/39/896839b6683b3e437384e2969e08870f.jpg",
           "link": "https://t.co/adhd-strengths-research"
         },
         "metadata": {
@@ -591,12 +591,12 @@ const userPost = [
           "name": "ArtificialLife",
           "username": "@synthetic_biology",
           "role": "Biotech Researcher",
-          "profilePicture": "https://somecdn.com/profiles/artificial_life.jpg"
+          "profilePicture": "https://i.pinimg.com/736x/e2/1d/cd/e21dcd11ed36073690de237901ec13fc.jpg"
         },
         "title": "Living Machines: How Engineered Bacteria Are Cleaning Our Oceans",
         "content": {
           "text": "Nature's microscopic recyclers, supercharged by science...\n\nThese engineered bacteria can break down microplastics 20x faster than natural processes and then self-destruct when their work is done.",
-          "image": "https://somecdn.com/science/plastic-eating-bacteria.jpg",
+          "image": "https://i.pinimg.com/736x/aa/96/3a/aa963a7e53fc893800ae834b3f3b43a4.jpg",
           "link": "https://t.co/synthetic-bio-cleanup"
         },
         "metadata": {
@@ -636,12 +636,12 @@ const userPost = [
           "name": "LanguageLovers",
           "username": "@polyglot_path",
           "role": "Linguistics Professor",
-          "profilePicture": "https://somecdn.com/profiles/language_lovers.jpg"
+          "profilePicture": "https://i.pinimg.com/736x/12/a1/cd/12a1cd9dc353bc25c887263bbc9f034b.jpg"
         },
         "title": "The Memory Palace: Learn Any Language's 2000 Most Common Words in 8 Weeks",
         "content": {
           "text": "Traditional language learning has it backwards...\n\nFocus on the highest-frequency 2000 words with these spatial memory techniques, and you'll understand 80% of everyday conversations in record time.",
-          "image": "https://somecdn.com/education/memory-palace-language.jpg",
+          "image": "https://i.pinimg.com/736x/7c/0c/88/7c0c88cec6f0a2474bbd889064eed6ee.jpg",
           "link": "https://t.co/language-memory-method"
         },
         "metadata": {
